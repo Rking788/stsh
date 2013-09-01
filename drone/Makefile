@@ -1,4 +1,4 @@
-CC=g++
+CC=clang++
 
 all: 
-	$(CC) -L/opt/local/lib -lopencv_core -lopencv_highgui -I/opt/local/include drone.cpp -o drone
+	$(CC) -lopencv_core -lopencv_highgui drone.cpp -o drone
