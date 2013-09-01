@@ -23,7 +23,7 @@ void setupListeningSocket();
 int main(int argc, char *argv[])
 {
     // OpenCV to open the iSight camera hopefully
-    testOpenCV(USEC_PERIOD);
+    //testOpenCV(USEC_PERIOD);
 
     // Code from a stackoverflow answer
     //testSOAnswer();
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     //testPipeToTerminal();
 
     // Setup a socket to start listening for connection and read from it
-    //setupListeningSocket();
+    setupListeningSocket();
 }
 
 void testOpenCV(useconds_t usecPeriod)
@@ -168,6 +168,8 @@ void setupListeningSocket()
               fprintf(stderr,"ERROR on binding");
    
      // Start listening on the port
+
+     printf("Starting to listen on port: %d\n", htons(portno));
      listen(sockfd,5);
 
      clilen = sizeof(cli_addr);
