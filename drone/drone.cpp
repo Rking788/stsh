@@ -23,7 +23,7 @@ void setupListeningSocket();
 int main(int argc, char *argv[])
 {
     // OpenCV to open the iSight camera hopefully
-    //testOpenCV(USEC_PERIOD);
+    testOpenCV(USEC_PERIOD);
 
     // Code from a stackoverflow answer
     //testSOAnswer();
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
     //testPipeToTerminal();
 
     // Setup a socket to start listening for connection and read from it
-    setupListeningSocket();
+    //setupListeningSocket();
 }
 
 void testOpenCV(useconds_t usecPeriod)
